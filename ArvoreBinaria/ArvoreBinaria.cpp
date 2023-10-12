@@ -1,3 +1,5 @@
+//Danilo Sena Santos
+
 #include <iostream>
 using namespace std;
 
@@ -152,5 +154,17 @@ int elementosArvore(NO* no)
 
 void exibirElementosArvore(NO* no)
 {
-	
+	if (raiz == NULL) {
+		cout << "Árvore sem frutos...";
+	}
+	else {
+		cout << no->valor << endl;
+		
+		if (no->dir != NULL) {
+			exibirElementosArvore(no->dir);
+		}
+		if (no->esq != NULL) {
+			exibirElementosArvore(no->esq);
+		}
+	}
 }
